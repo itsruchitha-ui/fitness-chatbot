@@ -1,0 +1,39 @@
+def fitness_chatbot():
+    print("🤖 AI Fitness and Meal Coach")
+    print("Type 'exit' to quit.\n")
+
+    while True:
+        user = input("You: ").lower()
+
+        if user == "exit":
+            print("Bot: Stay healthy! Goodbye.")
+            break
+
+        elif "weight loss" in user:
+            print("Bot: For weight loss, do 30 minutes of cardio and eat a calorie-deficit diet.")
+
+        elif "muscle gain" in user:
+            print("Bot: Focus on strength training and consume high-protein foods.")
+
+        elif "meal plan" in user:
+            print("Bot: Breakfast: Oats & Fruits\nLunch: Rice, Dal, Vegetables\nDinner: Salad & Grilled Paneer")
+
+        elif "protein" in user:
+            print("Bot: Good protein sources are eggs, chicken, fish, milk, paneer, and beans.")
+
+        elif "water" in user:
+            print("Bot: Drink at least 2–3 liters of water daily.")
+
+        elif "exercise" in user:
+            print("Bot: Try squats, push-ups, jogging, and planks for a balanced workout.")
+
+        elif "bmi" in user:
+            weight = float(input("Enter weight (kg): "))
+            height = float(input("Enter height (m): "))
+            bmi = weight / (height ** 2)
+            print("Bot: Your BMI is", round(bmi, 2))
+
+        else:
+            print("Bot: I can help with fitness plans, meal plans, BMI calculation, and health tips.")
+
+fitness_chatbot()
